@@ -1,3 +1,14 @@
 extends ./layouts/main.pug
     block content
-        h1 Hello detail
+        .detailBox  
+            h2 메모 상세보기
+                form(action="postUpdate" method="post")
+                    input(type="hidden" name="id")
+                    textarea(name="desc" placeholed="description...")
+                    button(type="submit") 수정하기
+                form(action="postDetail" method="post")
+                    input(type="hidden" name="id" )
+                    button(type="submit") 삭제하기
+                form(action="/" method="get")
+                    button(type="submit") 목록으로
+                    
